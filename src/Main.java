@@ -35,12 +35,5 @@ public class Main {
 
         String contents = purse.toString();
         System.out.println(contents);
-
-        /*boolean isCoin;
-        // Process type of currency (note or coin)
-        for (char c : input.toCharArray()) {
-            System.out.println("Print: " + c);
-        }
-         */
     }
 }

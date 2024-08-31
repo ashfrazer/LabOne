@@ -42,20 +42,22 @@ public class Purse {
     // Lists contents of the purse
     public String toString() {
         Denomination currency;
-        String contents = "";
+        // Create a mutable string containing contents of purse
+        StringBuilder contents = new StringBuilder();
 
         // Sort Denominations by value (increasing to decreasing)
         List<Map.Entry<Denomination, Integer>> entries = new ArrayList<>(this.cash.entrySet());
         entries.sort((e1, e2) -> Double.compare(e2.getKey().amt(), e1.getKey().amt()));
 
-        System.out.println("Purse currently contains: ");
-
         // Store money into a string
         for (Map.Entry<Denomination, Integer> entry : entries) {
             currency = entry.getKey();
             int quantity = entry.getValue();
-            contents += quantity + " x " + currency.name() + "\n";
+            contents.append(quantity).append(" x ").append(currency.name()).append("\n");
         }
-        return contents;
+        if (contents.isEmpty()) {
+            contents.append("Purse is empty.");
+        }
+        return contents.toString();
     }
 }

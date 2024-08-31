@@ -21,6 +21,8 @@ public class Main {
                         "_2009.jpg");
 
         Purse purse = new Purse();
+
+        /* Testing methods
         purse.add(twentyNote, 3);
         purse.add(tenNote, 2);
         purse.add(fiveNote, 5);
@@ -32,8 +34,11 @@ public class Main {
         purse.remove(tenNote, 1);
         purse.remove(oneNote, 2);
         purse.remove(fiveNote, 3);
-
+         */
+        
         String contents = purse.toString();
         System.out.println(contents);
+
+
     }
 }

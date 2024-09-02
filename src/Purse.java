@@ -54,7 +54,13 @@ public class Purse {
         for (Map.Entry<Denomination, Integer> entry : entries) {
             currency = entry.getKey();
             int quantity = entry.getValue();
-            contents.append(quantity).append(" x ").append(currency.name()).append("\n");
+            // Add "s" for plural currency and "-ies" to pennies
+            if (quantity > 1 && !"Penny".equals(currency.name()))
+                contents.append(quantity).append(" x ").append(currency.name()).append("s\n");
+            else if (quantity > 1)
+                contents.append(quantity).append(" x ").append("Pennies\n");
+            else
+                contents.append(quantity).append(" x ").append(currency.name()).append("\n");
         }
         if (contents.isEmpty()) {
             contents.append("Purse is empty.");

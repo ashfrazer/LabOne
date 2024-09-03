@@ -5,30 +5,23 @@ public class Register {
     public Purse makeChange(double amt) {
         // Create denominations for each type of currency
         Denomination hundredNote = new Denomination("Hundred-Note", 100.00, "Note",
-                "https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_" +
-                        "Federal_Reserve_Note.jpg");
+                "Images/hundred_note.png");
         Denomination twentyNote = new Denomination("Twenty-Note", 20.00, "Note",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/US_%2420_Series_2006_Obverse.jpg/" +
-                        "1920px-US_%2420_Series_2006_Obverse.jpg");
+                "Images/twenty_note.png");
         Denomination tenNote = new Denomination("Ten-Note", 10.00, "Note",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/US10dollarbill-Series_2004A.jpg/" +
-                        "1920px-US10dollarbill-Series_2004A.jpg");
+                "Images/ten_note.png");
         Denomination fiveNote = new Denomination("Five-Note", 5.00, "Note",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/US_%245_Series_2006_obverse.jpg/" +
-                        "1920px-US_%245_Series_2006_obverse.jpg");
+                "Images/five_note.png");
         Denomination oneNote = new Denomination("One-Note", 1.00, "Note",
-                "https://upload.wikimedia.org/wikipedia/commons/2/23/US_one_dollar_bill%2C_obverse%2C_series" +
-                        "_2009.jpg");
+                "Images/one_note.png");
         Denomination quarter = new Denomination("Quarter", 0.25, "Coin",
-                "https://upload.wikimedia.org/wikipedia/en/0/0f/2022_Washington_quarter_obverse.jpeg");
+                "Images/quarter.png");
         Denomination dime = new Denomination("Dime", 0.10, "Coin",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dime_Obverse_13.png/330px-Dime_" +
-                        "Obverse_13.png");
+                "Images/dime.png");
         Denomination nickel = new Denomination("Nickel", 0.05, "Coin",
-                "https://upload.wikimedia.org/wikipedia/en/c/ce/US_Nickel_Obverse.jpeg");
+                "Images/nickel.png");
         Denomination penny =  new Denomination("Penny", 0.01, "Coin",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/US_One_Cent_Obv.png/330px-US_One_" +
-                        "Cent_Obv.png");
+                "Images/penny.png");
 
         // Instantiate purse object
         Purse purse = new Purse();

@@ -21,9 +21,10 @@ public class RegisterPanel extends JPanel {
 
         // Panel displaying purse information
         changePanel = new PursePanel();
+        changePanel.setSize(500,800);
         changePanel.setBackground(Color.DARK_GRAY);
         changePanel.setForeground(Color.WHITE);
-        changePanel.setFont(new Font("Arial", Font.PLAIN, 15));
+        changePanel.setFont(new Font("Arial", Font.PLAIN, 20));
 
         // Align register panel horizontally
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -31,6 +32,7 @@ public class RegisterPanel extends JPanel {
         this.add(inputPanel);
         this.add(changePanel);
 
+        // Add ActionListener to text field when user presses Enter
         input.addActionListener(new InputListener());
     }
 
